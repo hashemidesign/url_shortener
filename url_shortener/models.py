@@ -24,3 +24,10 @@ class Link(db.Model):
             return self.generate_short_link()
 
         return short_url
+
+
+class User(db.Model):
+    id = db.Column(db.String(255), primary_key=True)
+    name = db.Column(db.String(255), nullable=False)
+    email = db.Column(db.String(255), nullable=False, unique=True)
+    pic = db.Column(db.String(512))

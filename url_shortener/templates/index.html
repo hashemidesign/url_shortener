@@ -1,13 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form method="post" action="{{ url_for('short.add_link') }}">
-    <input type="text" name="original_url">
-    <input type="submit" value="Submit">
-</form>
-</body>
-</html>
+{% extends 'layouts/main.html' %}
+{% block content %}
+    <section class="hero py-6 is-link">
+        <div class="hero-body container py-6">
+            <div class="columns is-vcentered">
+                <div class="column is-half">
+                    <p class="title is-1">Your Brand on Your Links</p>
+                    <p class="subtitle is-4 has-text-white-bis has-text-weight-light py-2">
+                        URL_Shortener is the industry-leading link management platform to brand,
+                        track and share short URLs
+                    </p>
+                    <button class="button is-light is-outlined">Sign Up Free</button>
+                </div>
+                <div class="column is-half">
+                    <img src="{{ url_for('static', filename='images/undraw_link_shortener.svg') }}" alt="Hero Image"
+                         class="image is-max-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {#<form method="post" action="{{ url_for('short.add_link') }}">#}
+    {#    <input type="text" name="original_url">#}
+    {#    <input type="submit" value="Submit">#}
+    {#</form>#}
+{% endblock %}

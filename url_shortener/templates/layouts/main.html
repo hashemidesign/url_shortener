@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bulma/bulma.min.css') }}">
+    <style>
+        .is-max-500 {
+            max-height: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+{%- include('layouts/header.html') -%}
+{% block content %}{% endblock %}
+{%- include('layouts/footer.html') -%}
+</body>
+</html>
